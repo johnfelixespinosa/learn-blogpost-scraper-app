@@ -1,5 +1,7 @@
-require "learn_blog_cli_app/version"
-
-module LearnBlogCliApp
-  # Your code goes here...
-end
+require 'open-uri'
+require 'pry'
+require 'nokogiri'
+require_relative './learn_blog_cli_app/version.rb'
+require_relative './cli.rb'
+require_relative './posts.rb'
+require_relative './scraper.rb'
