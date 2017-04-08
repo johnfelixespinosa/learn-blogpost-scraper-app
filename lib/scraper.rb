@@ -9,3 +9,10 @@ class Scraper
   end
 
 end 
+
+
+#http://blog.flatironschool.com/category/learning-to-code/
+#http://blog.flatironschool.com/category/career-advice/
+#http://blog.flatironschool.com/category/alumni-stories/
+#http://blog.flatironschool.com/category/flatiron-news/
+#http://blog.flatironschool.com/category/flatiron-engineering/

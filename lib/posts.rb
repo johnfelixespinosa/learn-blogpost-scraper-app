@@ -6,7 +6,7 @@ class Posts
 
   def self.new_from_index_page(r)
     self.new(
-
+      
       )
   end
 
@@ -14,15 +14,11 @@ class Posts
     @name = name
     @url = url
     @author = author
-    @category = ategory
+    @category = category
     @@all << self
   end
 
   def self.all
     @@all
-  end 
-
-  def doc 
-    @doc ||= Nokogiri::HTML(open(self.url))
   end 
 end 
