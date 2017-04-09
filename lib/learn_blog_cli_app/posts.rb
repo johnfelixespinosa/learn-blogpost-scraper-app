@@ -1,4 +1,4 @@
-class Posts
+class LearnBlogCLI::Posts
 
   attr_accessor :name, :url, :author, :category, :description
 

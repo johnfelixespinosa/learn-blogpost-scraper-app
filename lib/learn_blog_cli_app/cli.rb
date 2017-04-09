@@ -1,4 +1,4 @@
-class CLI
+class LearnBlogCLI::CLI
 
   def call
     puts "Welcome to the Learn.co blog post BOT!"
