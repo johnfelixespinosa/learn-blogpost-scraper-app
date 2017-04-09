@@ -21,8 +21,35 @@ class LearnBlogCLI::CLI
           end
         
 
-    puts "#{user_input}"
+    print_category(user_input)
+
+
   end
+
+  def print_category(input)
+      puts ""
+    if input == 1 
+      puts "---------- 1. Learning to Code Blog Posts ----------"
+      puts ""
+    elsif input == 2
+      puts "---------- 2. Career Advice Blog Posts ----------"
+      puts ""
+    elsif input == 3
+      puts "---------- 3. Alumni Stories Blog Posts ----------"
+      puts ""
+    elsif input == 4
+      puts "---------- 4. Flatiron News Blog Posts ----------"
+      puts ""
+    else
+      puts "---------- 5. Flatiron Engineering Blog Posts ----------"
+      puts ""
+    end
+
+
+  end
+        
+
+        
 
 
 
