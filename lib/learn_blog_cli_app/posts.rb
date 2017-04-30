@@ -4,9 +4,12 @@ class LearnBlogCLI::Posts
 
   @@all = []
 
-  def self.new_from_index_page(r)
+  def self.new_from_index_page(p)
     self.new(
-      
+      p.css("h2").text,
+      p.css.('.post-img').css("a").attribute("href").text,
+      p.css.('.post-footer').css("a").attribute("href").text,
+      category
       )
   end
 

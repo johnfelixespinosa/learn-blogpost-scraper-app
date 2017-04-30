@@ -1,14 +1,19 @@
+
 class LearnBlogCLI::Scraper
 
+#require 'open-uri'
+#require 'pry'
+#require 'nokogiri'
+
   def get_page(category_url)
-    Nokogiri::HTML(open("http://blog.flatironschool.com/category/#{category_url}"))
+    doc = Nokogiri::HTML(open("http://blog.flatironschool.com/category/#{category_url}"))
   end 
   
-  def scrape_blogs(url)
-    self.get_page.css("url")
+  def scrape_blogs
+    self.doc.css('.shell article')
   end
 
-  def make_posts(category)
+  def make_category(category)
     if category == 1
       get_page("learning-to-code")
     elsif category == 2
@@ -22,7 +27,14 @@ class LearnBlogCLI::Scraper
     end
   end
 
-end 
+  def make_posts
+    scrape_blogs.each do |p| 
+      LearnBlogCLI::Posts.new_from_index_page(p)
+    end  
+  end
+#binding.pry
+
+end
 
 
 #http://blog.flatironschool.com/category/learning-to-code/

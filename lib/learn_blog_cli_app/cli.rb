@@ -31,23 +31,23 @@ class LearnBlogCLI::CLI
     if input == 1 
       puts "---------- 1. Learning to Code Blog Posts ----------"
       puts ""
-      LearnBlogCLI::Scraper.new.make_posts(1)
+      LearnBlogCLI::Scraper.new.make_category(1)
     elsif input == 2
       puts "---------- 2. Career Advice Blog Posts ----------"
       puts ""
-      LearnBlogCLI::Scraper.new.make_posts(2)
+      LearnBlogCLI::Scraper.new.make_category(2)
     elsif input == 3
       puts "---------- 3. Alumni Stories Blog Posts ----------"
       puts ""
-      LearnBlogCLI::Scraper.new.make_posts(3)
+      LearnBlogCLI::Scraper.new.make_category(3)
     elsif input == 4
       puts "---------- 4. Flatiron News Blog Posts ----------"
       puts ""
-      LearnBlogCLI::Scraper.new.make_posts(4)
+      LearnBlogCLI::Scraper.new.make_category(4)
     else
       puts "---------- 5. Flatiron Engineering Blog Posts ----------"
       puts ""
-      LearnBlogCLI::Scraper.new.make_posts(5)
+      LearnBlogCLI::Scraper.new.make_category(5)
     end
 
 
