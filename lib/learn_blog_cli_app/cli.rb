@@ -44,7 +44,7 @@ class LearnBlogCLI::CLI
       puts "---------- 4. Flatiron News Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(4)
-    else
+    elsif input == 5
       puts "---------- 5. Flatiron Engineering Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(5)

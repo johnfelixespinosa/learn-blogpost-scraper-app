@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/learn_blog_cli_app'
+
+LearnBlogCLI::CLI.new.call

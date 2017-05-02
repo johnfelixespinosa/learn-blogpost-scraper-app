@@ -4,13 +4,17 @@ class LearnBlogCLI::Scraper
 #require 'open-uri'
 #require 'pry'
 #require 'nokogiri'
+attr_accessor :doc
+
+  @doc = ""
 
   def get_page(category_url)
-    doc = Nokogiri::HTML(open("http://blog.flatironschool.com/category/#{category_url}"))
+    @doc = Nokogiri::HTML(open("http://blog.flatironschool.com/category/#{category_url}"))
+    scrape_blogs
   end 
   
   def scrape_blogs
-    self.doc.css('.shell article')
+    puts self.doc.css('.shell article')
   end
 
   def make_category(category)

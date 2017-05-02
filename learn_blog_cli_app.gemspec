@@ -5,7 +5,7 @@ require 'learn_blog_cli_app/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "learn_blog_cli_app"
-  spec.version       = LearnBlogCliApp::VERSION
+  spec.version       = LearnBlogCLI::VERSION
   spec.authors       = ["johnfelixespinosa"]
   spec.email         = ["johnfelix.espinosa@icloud.com"]
 
