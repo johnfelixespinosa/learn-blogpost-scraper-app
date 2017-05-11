@@ -32,6 +32,7 @@ class LearnBlogCLI::CLI
       puts "---------- 1. Learning to Code Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(1)
+      print_post
     elsif input == 2
       puts "---------- 2. Career Advice Blog Posts ----------"
       puts ""
@@ -50,6 +51,11 @@ class LearnBlogCLI::CLI
       LearnBlogCLI::Scraper.new.make_category(5)
     end
 
+
+  end
+
+    def print_post
+      print LearnBlogCLI::Posts.all
 
   end
         
