@@ -23,4 +23,19 @@ class LearnBlogCLI::Posts
   def self.all
     @@all
   end 
+
+  def self.clear
+    @@all.clear
+  end
+
+  def self.list_posts
+    puts ""
+    puts "************* Current Posts *************"
+    puts ""
+    LearnBlogCLI::Posts.all.each.with_index(1) do |posts, i|
+      puts "#{i}. #{posts.name}"
+    end
+    puts ""
+  end
+
 end 

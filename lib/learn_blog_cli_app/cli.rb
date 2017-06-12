@@ -1,5 +1,7 @@
 class LearnBlogCLI::CLI
 
+  require 'pry'
+
   def call
     puts "Welcome to the Learn.co blog post BOT!"
     puts "Which blog post category would you like to see?"
@@ -22,6 +24,9 @@ class LearnBlogCLI::CLI
         
 
     print_category(user_input)
+
+    puts ""
+    puts " Which post would you like more information on?"
 
 
   end
@@ -59,7 +64,8 @@ class LearnBlogCLI::CLI
   end
 
     def print_post
-      print LearnBlogCLI::Posts.all
+      print LearnBlogCLI::Posts.list_posts
+      #binding.pry
 
   end
         
