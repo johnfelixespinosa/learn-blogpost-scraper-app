@@ -21,12 +21,16 @@ attr_accessor :doc
       make_posts
     elsif category == 2
       get_page("career-advice")
+      make_posts
     elsif category == 3
       get_page("alumni-stories")
+      make_posts
     elsif category == 4
       get_page("flatiron-news")
+      make_posts
     elsif category == 5
       get_page("flatiron-engineering")
+      make_posts
     end
   end
 

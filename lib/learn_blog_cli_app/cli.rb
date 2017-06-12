@@ -37,18 +37,22 @@ class LearnBlogCLI::CLI
       puts "---------- 2. Career Advice Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(2)
+      print_post
     elsif input == 3
       puts "---------- 3. Alumni Stories Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(3)
+      print_post
     elsif input == 4
       puts "---------- 4. Flatiron News Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(4)
+      print_post
     elsif input == 5
       puts "---------- 5. Flatiron Engineering Blog Posts ----------"
       puts ""
       LearnBlogCLI::Scraper.new.make_category(5)
+      print_post
     end
 
 
