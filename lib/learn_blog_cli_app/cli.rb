@@ -21,7 +21,6 @@ class LearnBlogCLI::CLI
             puts "Please enter a valid category number (1-5):"
             retry
           end
-        
 
     print_category(user_input)
     print_post
@@ -40,7 +39,11 @@ class LearnBlogCLI::CLI
             retry
           end
 
-    print_post(post_num)
+    print_post_info(post_num)
+  end
+
+  def print_post_info(input)
+    print LearnBlogCLI::Posts.print_post_info(input)
   end
 
   def print_category(input)
