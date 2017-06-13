@@ -8,15 +8,16 @@ class LearnBlogCLI::Posts
     self.new(
       p.css("h2").text,
       p.css('.post-img').css("a").attribute("href").text,
-      p.css('.post-footer').css("a").attribute("href").text
+      p.css('.post-footer').css("a").text,
+      p.css('.post-txt').css("p").text
       )
   end
 
-  def initialize(name=nil, url=nil, author=nil) #category=nil)
+  def initialize(name=nil, url=nil, author=nil, description=nil) #category=nil)
     @name = name
     @url = url
     @author = author
-    #@category = category
+    @description = description
     @@all << self
   end
 
@@ -30,7 +31,7 @@ class LearnBlogCLI::Posts
 
   def self.list_posts
     puts ""
-    puts "************* Current Posts *************"
+    puts "---------- Current Posts ----------"
     puts ""
     LearnBlogCLI::Posts.all.each.with_index(1) do |posts, i|
       puts "#{i}. #{posts.name}"
@@ -39,3 +40,6 @@ class LearnBlogCLI::Posts
   end
 
 end 
+
+# create a post_info method that lists the remaining attributes of each variable in the all array
+# when to clear all? most likely before asking user if they would like to see another category?
