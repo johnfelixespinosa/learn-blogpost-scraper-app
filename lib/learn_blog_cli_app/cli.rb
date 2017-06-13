@@ -44,6 +44,17 @@ class LearnBlogCLI::CLI
 
   def print_post_info(input)
     print LearnBlogCLI::Posts.print_post_info(input)
+    puts ""
+    answer = nil
+    puts "Would you like more info on another post? (Y/N)"
+    answer = gets.strip
+      if answer == "Y"
+        LearnBlogCLI::Posts.clear
+        call
+      else
+        puts "Goodbye!!"
+      end
+
   end
 
   def print_category(input)
