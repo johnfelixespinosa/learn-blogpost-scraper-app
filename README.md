@@ -1,19 +1,19 @@
 # Learn.co Blog Post List CLI app
 ### By: John Espinosa
 
-This CLI app scrapes the Learn.co Blog and lists the links to the blog posts while also providing author info and blog post date.
+This CLI app scrapes the Learn.co Blog and lists the titles to the blog posts while also providing author info, blog post description, and url.
 
-## Installation
+## Installation and Usage
 
-    
+Upon cloning this repo to your machine you can run 
 
-## Usage
+  $ ruby bin/learn_blog_cli_app
 
-    
-
+From here you can follow the onscreen prompts
+  
 ## Development
 
-
+Read my blog post about building this application here [Scraping the web, one site at a time](http://johnfelixespinosa.github.io/johnfelixespinosa.github.io/2017-05-14-Scraping-the-Web,-One-Site-at-a-Time/)
 
 ## Contributing
 
