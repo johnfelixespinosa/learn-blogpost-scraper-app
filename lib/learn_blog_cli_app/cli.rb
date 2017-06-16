@@ -14,16 +14,16 @@ class LearnBlogCLI::CLI
          "
     puts "Enter category number:"
 
-          begin
-          user_input = gets.chomp
-          user_input = Integer(user_input)
-          rescue
-            puts "Please enter a valid category number (1-5):"
-            retry
-          end
+          
+    user_input = gets.chomp.to_i
 
-    print_category(user_input)
-    print_post
+    if user_input.between?(1, 5)
+      print_category(user_input)
+      print_post
+    else
+      puts "Please enter number between 1-5"
+      call
+    end
   end
 
   def print_post
@@ -43,9 +43,16 @@ class LearnBlogCLI::CLI
   end
 
   def print_post_info(input)
-    print LearnBlogCLI::Posts.print_post_info(input)
+    post = LearnBlogCLI::Posts.all[input-1]
     puts ""
-    answer = nil
+    puts "#{post.name}"
+    puts "Written by : #{post.author}"
+    puts ""
+    puts "#{post.description}..."
+    puts ""
+    puts "Please visit : "
+    puts "#{post.url}"
+    puts "For complete post"
     puts "Would you like more info on another post? (Y/N)"
     answer = gets.strip
       if answer == "Y"
@@ -54,7 +61,6 @@ class LearnBlogCLI::CLI
       else
         puts "Goodbye!!"
       end
-
   end
 
   def print_category(input)

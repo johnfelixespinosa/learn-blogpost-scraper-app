@@ -33,8 +33,17 @@ class LearnBlogCLI::Scraper
 
   def make_posts
     scrape_blogs.each do |p| 
-      LearnBlogCLI::Posts.new_from_index_page(p)
+      new_from_index_page(p)
     end  
+  end
+
+  def new_from_index_page(p)
+    LearnBlogCLI::Posts.new(
+      p.css("h2").text,
+      p.css('.post-img').css("a").attribute("href").text,
+      p.css('.post-footer').css("a").text,
+      p.css('.post-txt').css("p").text
+      )
   end
 #binding.pry
 end
