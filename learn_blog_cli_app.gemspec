@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["johnfelixespinosa"]
   spec.email         = ["johnfelix.espinosa@icloud.com"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.summary       = "This CLI app scrapes the Learn.co Blog and lists the titles to the blog posts while also providing author info, blog post description, and url."
+  spec.description   = "Student CLI application that uses nokogiri and open-uri, to scrape web data from an external data source. Final project for the Object Oriented Ruby section of the Learn.co full stack web dev track."
+  spec.homepage      = "https://github.com/johnfelixespinosa/learn-blogpost-scraper-app"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

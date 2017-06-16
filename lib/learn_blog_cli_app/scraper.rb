@@ -1,9 +1,6 @@
 class LearnBlogCLI::Scraper
-
-#require 'open-uri'
-#require 'pry'
-#require 'nokogiri'
-attr_accessor :doc
+  
+  attr_accessor :doc
 
   @doc = ""
 
@@ -40,7 +37,6 @@ attr_accessor :doc
     end  
   end
 #binding.pry
-
 end
 
 

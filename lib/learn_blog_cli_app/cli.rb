@@ -95,12 +95,6 @@ class LearnBlogCLI::CLI
 
   end
         
-
-        
-
-
-
-
 end
 
 
