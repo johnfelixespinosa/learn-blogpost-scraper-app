@@ -70,30 +70,18 @@ class LearnBlogCLI::CLI
       puts ""
     if input == 1 
       puts "---------- 1. Learning to Code Blog Posts ----------"
-      puts ""
-      scrape_category
-      show_posts
     elsif input == 2
       puts "---------- 2. Career Advice Blog Posts ----------"
-      puts ""
-      scrape_category
-      show_posts
     elsif input == 3
       puts "---------- 3. Alumni Stories Blog Posts ----------"
-      puts ""
-      scrape_category
-      show_posts
     elsif input == 4
       puts "---------- 4. Flatiron News Blog Posts ----------"
-      puts ""
-      scrape_category
-      show_posts
     elsif input == 5
       puts "---------- 5. Flatiron Engineering Blog Posts ----------"
+    end
       puts ""
       scrape_category
       show_posts
-    end
   end
 
   def show_posts
@@ -107,12 +95,3 @@ class LearnBlogCLI::CLI
   end
         
 end
-
-
-# => "Welcome to the Learn.co blog post bot"
-# => "Which blog post category would you like to see?"
-# => "1. Learning to code"
-# => "2. Career Advice"
-# => "3. Alumni Stories"
-# => "4. Flatiron News"
-# => "5. Flatiron Engineering"

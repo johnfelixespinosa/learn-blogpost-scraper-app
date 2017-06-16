@@ -15,20 +15,16 @@ class LearnBlogCLI::Scraper
   def make_category(category)
     if category == 1
       get_page("learning-to-code")
-      make_posts
     elsif category == 2
       get_page("career-advice")
-      make_posts
     elsif category == 3
       get_page("alumni-stories")
-      make_posts
     elsif category == 4
       get_page("flatiron-news")
-      make_posts
     elsif category == 5
       get_page("flatiron-engineering")
-      make_posts
     end
+      make_posts
   end
 
   def make_posts
@@ -45,12 +41,5 @@ class LearnBlogCLI::Scraper
       p.css('.post-txt').css("p").text
       )
   end
-#binding.pry
+
 end
-
-
-#http://blog.flatironschool.com/category/learning-to-code/
-#http://blog.flatironschool.com/category/career-advice/
-#http://blog.flatironschool.com/category/alumni-stories/
-#http://blog.flatironschool.com/category/flatiron-news/
-#http://blog.flatironschool.com/category/flatiron-engineering/
